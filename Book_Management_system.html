@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Management System</title>
+    <style>
+      
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        h1, h2 {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+      
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+       
+        .form-section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ccc;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box; 
+            border: 1px solid #999;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #f0f0f0;
+            border: 1px solid #999;
+        }
+
+        button:hover {
+            background-color: #e0e0e0;
+        }
+
+     
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .delete-btn {
+            color: red;
+            text-decoration: underline;
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Book Management System</h1>
+    </header>
+
+    <div class="form-section">
+        <h2>Add New Book</h2>
+        <form id="bookForm">
+            <div class="form-group">
+                <label>Book Title</label>
+                <input type="text" id="title" required placeholder="e.g. The Great Gatsby">
+            </div>
+
+            <div class="form-group">
+                <label>Author</label>
+                <input type="text" id="author" required placeholder="e.g. F. Scott Fitzgerald">
+            </div>
+
+            <div class="form-group">
+                <label>ISBN</label>
+                <input type="text" id="isbn" required placeholder="e.g. 978-3-16-148410-0">
+            </div>
+
+            <div class="form-group">
+                <label>Publication Date</label>
+                <input type="date" id="pubDate" required>
+            </div>
+
+            <div class="form-group">
+                <label>Genre</label>
+                <select id="genre" required>
+                    <option value="">-- Select --</option>
+                    <option value="Fiction">Fiction</option>
+                    <option value="Non-Fiction">Non-Fiction</option>
+                    <option value="Mystery">Mystery</option>
+                    <option value="Sci-Fi">Sci-Fi</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Biography">Biography</option>
+                    <option value="History">History</option>
+                </select>
+            </div>
+
+            <button type="submit">Add Book</button>
+        </form>
+    </div>
+
+    <div>
+        <h2>Book List</h2>
+        <table id="bookTable">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                    <th>Date</th>
+                    <th>Genre</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="bookList">
+               
+                <tr>
+                    <td>The Algorithm Complexity</td>
+                    <td>F. Scott Fitzgerald</td>
+                    <td>978-3-16-148410-0</td>
+                    <td>1925-04-10</td>
+                    <td>Science</td>
+                    <td><button class="delete-btn">Delete</button></td>
+                </tr>
+                <tr id="emptyState">
+                    <td colspan="6" style="text-align: center; color: #888; font-style: italic">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
