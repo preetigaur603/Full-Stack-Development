@@ -1,69 +1,92 @@
-<doctype html >
-  <html>
-    <head>
-      <title>Javascript bms system</title>
-    </head>
-    <body>
-      <main>
-        <nav>
-          BMS-Book Management System
-        </nav>
-        <form>
-         <div>
-            <label class="title">Book Title</label>
-          <input id=title>Title</input>
-         </div>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript BMS System</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-           <div>
-            <label class="author">Book Author</label>
-          <input id=author>Author</input>
-         </div>
+<body class="bg-gray-100">
 
-           <div>
-            <label class="isbn">ISBN</label>
-          <input id=isbn>ISBN</input>
-         </div>
+<main class="max-w-4xl mx-auto mt-10 bg-white p-8 rounded-lg shadow">
 
-           <div>
-            <label class="pub_date">Publication Date</label>
-          <input id=pub_date>Publication Date</input>
-         </div>
+<nav class="text-2xl font-bold text-center mb-8 text-blue-600">
+BMS - Book Management System
+</nav>
 
-          <div>
-            <label class="genre">Genre</label>
-            <select id="genre">
-              <option value="">Select Genre</option>
-              <option value="Technology"></option>
-              <option value="History"></option>
-              <option value="Friction"></option>
-              <option value="Non-Friction"></option>
-              <option value="Entertainment"></option>
-              </select>
-          </div>
-          <div><button id="submit-btn">
-            Add Book
-          </button>
-            <button id="delete-btn">
-            Delete Book
-          </button>
+<form id="BookForm" class="grid grid-cols-2 gap-6">
+
+<div>
+<label class="block font-semibold mb-1">Book Title</label>
+<input id="title" type="text" placeholder="Enter title"
+class="w-full border rounded p-2">
+</div>
+
+<div>
+<label class="block font-semibold mb-1">Book Author</label>
+<input id="author" type="text" placeholder="Enter author"
+class="w-full border rounded p-2">
+</div>
+
+<div>
+<label class="block font-semibold mb-1">ISBN</label>
+<input id="isbn" type="text" placeholder="Enter ISBN"
+class="w-full border rounded p-2">
+</div>
+
+<div>
+<label class="block font-semibold mb-1">Publication Date</label>
+<input id="pub_date" type="date"
+class="w-full border rounded p-2">
+</div>
+
+<div class="col-span-2">
+<label class="block font-semibold mb-1">Genre</label>
+<select id="genre" class="w-full border rounded p-2">
+<option value="">Select Genre</option>
+<option value="Technology">Technology</option>
+<option value="History">History</option>
+<option value="Fiction">Fiction</option>
+<option value="Non-Fiction">Non-Fiction</option>
+<option value="Entertainment">Entertainment</option>
+</select>
+</div>
+
+<div class="col-span-2 flex gap-4">
+
+<button type="submit" id="submit-btn"
+class="bg-green-500 text-white px-4 py-2 rounded">
+Add Book
+</button>
 
 </div>
-          
-        </form>
 
-        <div>
-          <table><thead>
-            <tr>Title</tr>
-            <tr>Author</tr>
-            <tr>Isbn</tr>
-            <tr>Publication Date</tr>
-            <tr>Genre</tr>
-            <tr>Action</tr>
-          </thead></table>
-        </div>
-      </main>
+</form>
 
-      <script src="javascript.js"></script>
-    </body>
-    
-    </html>
+<div class="mt-10">
+
+<table class="w-full border">
+
+<thead class="bg-blue-500 text-white">
+<tr>
+<th class="p-2">Title</th>
+<th>Author</th>
+<th>ISBN</th>
+<th>Publication Date</th>
+<th>Genre</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody id="book-list"></tbody>
+
+</table>
+
+</div>
+
+</main>
+
+<script src="javascript.js"></script>
+
+</body>
+</html>
