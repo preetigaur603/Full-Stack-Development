@@ -1,0 +1,69 @@
+<doctype html >
+  <html>
+    <head>
+      <title>Javascript bms system</title>
+    </head>
+    <body>
+      <main>
+        <nav>
+          BMS-Book Management System
+        </nav>
+        <form>
+         <div>
+            <label class="title">Book Title</label>
+          <input id=title>Title</input>
+         </div>
+
+           <div>
+            <label class="author">Book Author</label>
+          <input id=author>Author</input>
+         </div>
+
+           <div>
+            <label class="isbn">ISBN</label>
+          <input id=isbn>ISBN</input>
+         </div>
+
+           <div>
+            <label class="pub_date">Publication Date</label>
+          <input id=pub_date>Publication Date</input>
+         </div>
+
+          <div>
+            <label class="genre">Genre</label>
+            <select id="genre">
+              <option value="">Select Genre</option>
+              <option value="Technology"></option>
+              <option value="History"></option>
+              <option value="Friction"></option>
+              <option value="Non-Friction"></option>
+              <option value="Entertainment"></option>
+              </select>
+          </div>
+          <div><button id="submit-btn">
+            Add Book
+          </button>
+            <button id="delete-btn">
+            Delete Book
+          </button>
+
+</div>
+          
+        </form>
+
+        <div>
+          <table><thead>
+            <tr>Title</tr>
+            <tr>Author</tr>
+            <tr>Isbn</tr>
+            <tr>Publication Date</tr>
+            <tr>Genre</tr>
+            <tr>Action</tr>
+          </thead></table>
+        </div>
+      </main>
+
+      <script src="javascript.js"></script>
+    </body>
+    
+    </html>
