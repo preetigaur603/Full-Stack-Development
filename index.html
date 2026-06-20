@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -89,4 +90,80 @@ Add Book
 <script src="javascript.js"></script>
 
 </body>
+=======
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity-1</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h2>Book Management System</h2>
+    <form>
+        
+      <div>
+
+        <label for="title">Title</label>
+        <input type="text" id="title" placeholder="enter the title" />
+      </div>
+
+      <div>
+        <label for="author">Author</label>
+        <input
+          type="text"
+          id="author"
+          placeholder="enter 
+author name"
+        />
+      </div>
+
+      <div>
+        <label for="isbn">ISBN No.</label>
+        <input type="text" id="isbn" placeholder="enter isbn no." />
+      </div>
+
+      <div>
+        <label for="publication_date">Publication Date</label>
+        <input type="date" id="publication_date" />
+      </div>
+
+      <div>
+        <label for="genre">Genre</label>
+        <select name="genre" id="genre">
+          <option value="genre">Genre</option>
+          <option>History</option>
+          <option>Technology</option>
+          <option>Science</option>
+          <option>Programming</option>
+        </select>
+      </div>
+      <div>
+        <label for="price">Price</label>
+        <input type="number" id="price" />
+      </div>
+
+      <div><button type="button" onclick="addBook()">Add Book</button></div>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>ISBN</th>
+                <th>Publication Date</th>
+                <th>Age</th>
+                <th>Genre</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="Book_Table"></tbody>
+    </table>
+    <script src="javascript.js"></script>
+  </body>
+>>>>>>> a7044bc (Implemented Book Management System with CRUD operations, validation, age calculation and genre categorization)
 </html>
